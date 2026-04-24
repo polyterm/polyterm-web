@@ -1,0 +1,8 @@
+polyterm.one {
+    root * /srv
+    file_server
+}
+
+www.polyterm.one {
+    redir https://polyterm.one{uri} permanent
+}
