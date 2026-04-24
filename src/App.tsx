@@ -54,8 +54,13 @@ export default function App() {
               alt="polyterm logo"
               className="mx-auto mb-8 block h-24 w-24 rounded-[24%]"
             />
-            <h1 className="m-0 text-[clamp(2.25rem,6vw,3.75rem)] font-light tracking-[0.15em]">
-              polyterm
+            <h1 className="m-0 flex items-baseline justify-center font-mono text-[clamp(2.25rem,6vw,3.75rem)] font-normal tracking-tight">
+              <span className="text-[#e6e6e6]">&gt;</span>
+              <span className="ml-[0.3em]">polyterm</span>
+              <span
+                aria-hidden
+                className="ml-[0.22em] inline-block h-[0.14em] w-[0.55em] -translate-y-[0.28em] animate-blink bg-[#22c55e]"
+              />
             </h1>
             <p className="mt-3 text-[0.7rem] uppercase tracking-[0.28em] opacity-50 sm:text-xs">
               the bloomberg terminal for polymarket
@@ -76,21 +81,26 @@ export default function App() {
             <Feature label="rust" desc="Zero-overhead core for sub-millisecond response." />
           </div>
 
-          <div className="mt-20 text-center">
-            <p className="mb-6 font-mono text-[0.65rem] uppercase tracking-[0.35em] opacity-40">
-              coming soon
-            </p>
-            <div className="flex justify-center gap-6">
-              <SocialLink href="https://github.com/polyterm" label="GitHub">
-                <Github className="h-6 w-6" strokeWidth={1.5} />
-              </SocialLink>
-              <SocialLink href="https://x.com/PolyTermOne" label="X">
-                <XIcon />
-              </SocialLink>
-              <SocialLink href="https://t.me/PolyTermOne" label="Telegram">
-                <TelegramIcon />
-              </SocialLink>
+          <section className="mt-16">
+            <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.3em] text-[#e6e6e6]/40">
+              install
+            </h2>
+            <div className="rounded border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm">
+              <span className="text-[#22c55e]">$</span>{' '}
+              <span className="text-[#e6e6e6]/40">coming soon</span>
             </div>
+          </section>
+
+          <div className="mt-32 flex justify-center gap-6">
+            <SocialLink href="https://github.com/polyterm" label="GitHub">
+              <Github className="h-6 w-6" strokeWidth={1.5} />
+            </SocialLink>
+            <SocialLink href="https://x.com/PolyTermOne" label="X">
+              <XIcon />
+            </SocialLink>
+            <SocialLink href="https://t.me/PolyTermOne" label="Telegram">
+              <TelegramIcon />
+            </SocialLink>
           </div>
 
         </div>
