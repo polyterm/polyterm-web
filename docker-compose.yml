@@ -2,7 +2,7 @@ name: polyterm-web
 
 services:
   caddy:
-    image: caddy:2-alpine
+    build: .
     container_name: polyterm-caddy
     restart: unless-stopped
     ports:
@@ -10,8 +10,6 @@ services:
       - "443:443"
       - "443:443/udp"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./site:/srv:ro
       - caddy_data:/data
       - caddy_config:/config
 
